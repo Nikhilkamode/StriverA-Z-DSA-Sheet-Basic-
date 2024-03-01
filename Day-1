@@ -1,0 +1,81 @@
+/*Reverse a Number*/
+#include<stdio.h>
+
+int main()
+{
+    int N = 123;
+    int num = N;
+    int reverse = 0;
+    while(N!=0)
+    {
+        int digit = N%10;
+        reverse = reverse*10+digit;
+        N = N/10;
+    }
+    printf("The reverse of the %d is %d",num,reverse);
+}
+
+/* Count no of digits*/
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int count_digits( int n )
+{
+   int x = n; int count =0;
+   while( x !=0 ) 
+   {
+       x = x / 10;
+       count++;
+   }
+   return count;
+}
+
+
+int main()
+{
+   int n = 12345;
+   cout<< "Number of digits in "<<n<<" is "<<count_digits(n);
+   return 0;
+}
+/*Check Palindrome*/
+#include <iostream>
+
+using namespace std;
+int reverse(int X) {
+   int Y = 0;
+   while (X > 0) {
+      //Extract the last digit
+      int digit = X % 10;
+      //Appending last digit
+      Y = Y * 10 + digit;
+      // Shrinking X by discarding the last digit
+      X = X / 10;
+   }
+   return Y;
+}
+int main() {
+   int X = 121;
+   int dummy = X;
+   int Y = reverse(X);
+   if (dummy == Y) {
+      cout << "Palindrome Number" << endl;
+   } else {  cout << "Not Palindrome Number" << endl;
+   }
+   return 0;
+}
+/*GCD Of a Number*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int num1 = 4, num2 = 8;
+	int ans;
+	for (int i = 1; i <= min(num1, num2); i++) {
+		if (num1 % i == 0 && num2 % i == 0) {
+			ans = i;
+		}
+	}
+	cout << "The GCD of the two numbers is "<<ans;
+}
