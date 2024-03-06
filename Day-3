@@ -1,0 +1,91 @@
+/*Recursive function*/
+#include<bits/stdc++.h>
+using namespace std;
+int cnt = 0;
+
+void print(){
+   
+   // Base Condition.
+   if(cnt == 3)  return;
+   cout<<cnt<<endl;
+
+   // Count Incremented
+   cnt++;
+   print();
+
+}
+
+int main(){
+    print();
+  return 0;
+}
+
+/*Print N numbers using recursion*/
+#include<bits/stdc++.h>
+using namespace std;
+
+void func(int i, int n){
+   
+   // Base Condition.
+   if(i>n) return;
+   cout<<"Raj"<<endl;
+
+   // Function call to print till i increments.
+   func(i+1,n);
+
+}
+
+int main(){
+  
+  // Here, let’s take the value of n to be 4.
+  int n = 4;
+  func(1,n);
+  return 0;
+}
+
+/* Print 1 To N using Recursion */
+#include<bits/stdc++.h>
+using namespace std;
+
+void func(int i, int n){
+   
+   // Base Condition.
+   if(i>n) return;
+   cout<<i<<endl;
+
+   // Function call to print i till i increments to n.
+   func(i+1,n);
+
+}
+
+int main(){
+// Here, let’s take the value of n to be 4.
+  int n = 4;
+  func(1,n);
+  return 0;
+
+}
+
+/*Print N to 1 Using Recursion */
+#include<bits/stdc++.h>
+using namespace std;
+
+void func(int i, int n){
+   
+   // Base Condition.
+   if(i<1) return;
+   cout<<i<<endl;
+
+   // Function call to print i till i decrements to 1.
+   func(i-1,n);
+
+}
+
+int main(){
+  
+  // Here, let’s take the value of n to be 4.
+  int n = 4;
+  func(n,n);
+  return 0;
+
+}
